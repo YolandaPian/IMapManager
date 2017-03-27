@@ -1,0 +1,6 @@
+platform :ios, '7.0'
+target 'MapDemo' do
+pod 'AMap2DMap'
+pod 'BaiduMapKit'
+end
+
