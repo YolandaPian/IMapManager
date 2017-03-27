@@ -26,6 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+/**
+ 示例如下:
+ */
+    
     
     //集成高德地图
 //    [[AMapServices sharedServices] setEnableHTTPS:YES];
@@ -60,16 +64,14 @@
 //    [self.view addSubview:[BmapView getView]];
     
     //高德地图工厂
-    id<MapFactory> mapFactory = [[GaodeMapViewFactory alloc] init];
-    id<BaseMapView> mapView =[mapFactory getMapViewWithFrame:self.view.frame];
-    [self.view addSubview:[mapView getView]];
-    
-    
-    
-    
+//    id<MapFactory> mapFactory = [[GaodeMapViewFactory alloc] init];
+//    id<BaseMapView> mapView =[mapFactory getMapViewWithFrame:self.view.frame];
+//    [self.view addSubview:[mapView getView]];
     // Do any additional setup after loading the view, typically from a nib.
 }
-
+/**
+ 自2.0.0起，BMKMapView新增viewWillAppear、viewWillDisappear方法来控制BMKMapView的生命周期，并且在一个时刻只能有一个BMKMapView接受回调消息，因此在使用BMKMapView的viewController中需要在viewWillAppear、viewWillDisappear方法中调用BMKMapView的对应的方法，并处理delegate
+ */
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

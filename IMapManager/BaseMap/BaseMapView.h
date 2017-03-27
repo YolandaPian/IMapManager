@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+/**
+ 各种地图视图遵循的协议
+ */
+
 @protocol BaseMapView <NSObject>
 - (UIView *)getView;
-
 - (instancetype)initWithFrame: (CGRect)frame;
 @end

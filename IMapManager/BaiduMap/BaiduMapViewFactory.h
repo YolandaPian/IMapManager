@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaseMapView.h"
 #import "MapFactory.h"
 
 @interface BaiduMapViewFactory : NSObject<MapFactory>
